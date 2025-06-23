@@ -65,7 +65,7 @@ app.get("/api/getsignedorderurls/:orderId", async (req, res) => {
 });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-app.get("/digitalorder/:orderId", (req, res) =>
+app.get("/order/:orderId", (req, res) =>
   res.sendFile(path.join(__dirname, "public", "digitalorder.html"))
 );
 

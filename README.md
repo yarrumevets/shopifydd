@@ -122,7 +122,7 @@ yarn
 {% endfor %}
 {% if has_digi %}
   </ul>
-  <a href="https://<YOUR_URL>/digitalorder/{{ order.id | remove: 'gid://shopify/Order/' }}">📥 Click here to download your files!</a>
+  <a href="https://<YOUR_URL>/order/{{ order.id | remove: 'gid://shopify/Order/' }}">📥 Click here to download your files!</a>
 </div>
 {% endif %}
 ```
@@ -145,7 +145,7 @@ node server.js
 Go to your Shop (set it to test mode) and make a purchase for a digital item. Be sure to enter your actual email in the email/phone number input field.
 You can add multiple items and even include physical products. Only digital products (those with "DIGI" in their SKUs) will be linked.
 
-Go to your email and click the link. `http://localhost:4199/digitalorder/<YOUR_ORDER_ID>`.
+Go to your email and click the link. `http://localhost:4199/order/<YOUR_ORDER_ID>`.
 
 ## Resources
 
