@@ -3,7 +3,7 @@ import { getProductData, getOrderData, addOrder } from "./db.js";
 import { getS3ProductUrl } from "./s3.js";
 import path from "path";
 import { fileURLToPath } from "url";
-import { verifyShopifyOrder } from "./shopify.js";
+import { verifyShopifyOrder, verifyShopifyWebhook } from "./shopify.js";
 
 const SERVER_PORT = 4199;
 const app = express();
