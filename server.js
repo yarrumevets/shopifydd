@@ -12,9 +12,9 @@ app.use(express.static("public"));
 // Customer paid webhook.
 app.post(
   "/webhook/orders-paid",
-  console.log("\x1b[32m🎉 Webhook HIT! 🎉\x1b[0m");
   express.raw({ type: "application/json" }),
   (req, res) => {
+    console.log(`\x1b[32m🎉 Webhook HIT! 🎉\x1b[0m`);
     const rawBody = req.body;
     let body;
     if (!verifyShopifyWebhook(rawBody, req.headers)) {
@@ -28,7 +28,7 @@ app.post(
       customerId: String(body.customer.id),
       variantIds: body.line_items.map((item) => String(item.variant_id)),
     };
-    console.log(`Saving order #${orderInfo.orderId}...`)
+    console.log(`Saving order #${orderInfo.orderId}...`);
     addOrder(orderInfo);
     res.sendStatus(200);
   }
