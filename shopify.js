@@ -11,6 +11,10 @@ const verifyShopifyOrder = async (orderId) => {
 
 function verifyShopifyWebhook(rawBody, reqHeaders) {
   const hmac = reqHeaders["x-shopify-hmac-sha256"];
+  if (!hmac) {
+    console.error("NO HMAC header.");
+    return false;
+  }
   const digest = crypto
     .createHmac("sha256", shopifyConfig.apiSecretKey)
     .update(rawBody)
