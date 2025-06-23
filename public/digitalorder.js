@@ -2,9 +2,10 @@ const orderId = location.pathname.split("/").pop();
 const urlsList = document.getElementById("urls-list");
 const pageTitle = document.getElementById("page-title");
 const orderNumberText = document.createElement("span");
+const basePath = document.querySelector("base")?.href;
 pageTitle.appendChild(orderNumberText);
 orderNumberText.innerHTML = `Order #${orderId}`;
-fetch(`/api/getsignedorderurls/${orderId}`)
+fetch(`${basePath}/api/getsignedorderurls/${orderId}`)
   .then((r) => r.json())
   .then(({ urls }) => {
     urls.forEach((u) => {
