@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { verifyShopifyOrder, verifyShopifyWebhook } from "./shopify.js";
 
-const SERVER_PORT = 4199;
+const SERVER_PORT = 4198;
 const app = express();
 app.use(express.static("public"));
 

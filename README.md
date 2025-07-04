@@ -74,7 +74,7 @@ yarn
 ### 🔹 Ngrok (optional)
 
 - Install and run [Ngrok](https://ngrok.com) for the Shopify webhook:
-  `ngrok http 4199`
+  `ngrok http 4198`
 
 ### 🔹 Register webhook
 
@@ -145,7 +145,7 @@ node server.js
 Go to your Shop (set it to test mode) and make a purchase for a digital item. Be sure to enter your actual email in the email/phone number input field.
 You can add multiple items and even include physical products. Only digital products (those with "DIGI" in their SKUs) will be linked.
 
-Go to your email and click the link. `http://localhost:4199/order/<YOUR_ORDER_ID>`.
+Go to your email and click the link. `http://localhost:4198/order/<YOUR_ORDER_ID>`.
 
 ## Resources
 
